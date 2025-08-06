@@ -1,1 +1,136 @@
 
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+       text-align: center;
+       margin-bottom: 2rem;
+}
+.site-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+.site-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+.nav-bar {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.nav-bar a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.nav-bar a:hover {
+    color: #0d47a1;
+}
+/* Grid Card */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+   background-color: #ffffff;
+   padding: 1.25rem;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   animation: fade-in 0.5s ease-out;
+   display: flex;
+   flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+.card h2 {
+    font-size: 1.5rem;
+    color: #1a73e8;
+    margin-bottom: 0.5rem;
+}
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+.featured{
+    border: 2px dashed #ff9800;
+    background-color: #555;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Positioning */
+.badge.absolute {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    }
+    .badge.fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1a73e8;
+        color:#fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+    .site-footer {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+/*Adaptive Design */
+@media (max-width: 760px) {
+    .site-header {
+        font-size:2rem;
+    }
+    .card h2 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+                    ;
